@@ -13,3 +13,4 @@ To set up:
   ```
   http://username:password/ip:port/
   ```
+- run rails server (rails s)  
