@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   root 'index#status'
 
   get 'update' => 'index#update_config'
-
+  get 'files' => 'files#index'
+  get 'files/:filename' => 'files#get
+'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

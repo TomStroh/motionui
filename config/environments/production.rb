@@ -76,5 +76,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.motion_api_base_path = 'http://localhost/'
+  config.motion_api_base_path = 'http://192.168.178.68:8080/'
+  config.video_path = '/tmp/motion'
 end

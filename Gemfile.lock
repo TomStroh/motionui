@@ -147,7 +147,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass (~> 3.3.3)
+  bootstrap-sass (~> 3.3.4)
   coffee-rails (~> 4.0.0)
   httparty
   jbuilder (~> 2.0)

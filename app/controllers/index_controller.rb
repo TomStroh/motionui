@@ -5,7 +5,10 @@ class IndexController < ApplicationController
     # /0/config/set?control_html_output=off
     @status = HTTParty.get(Rails.application.config.motion_api_base_path)
     @config_values = get_config
-
+    respond_to do |format|
+      format.html
+      format.json { render json: @config_values }
+    end
   end
 
   # this supports a key and a value

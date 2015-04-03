@@ -36,4 +36,5 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.motion_api_base_path = 'http://192.168.178.68:8080/'
+  config.video_path = '/tmp/motion'
 end
