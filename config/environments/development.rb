@@ -35,5 +35,5 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
-  config.motion_base_path = 'http://someip/'
+  config.motion_api_base_path = 'http://someip/'
 end
