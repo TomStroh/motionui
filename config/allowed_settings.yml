@@ -1,8 +1,10 @@
 framerate:
   allowed:
-    - 50
-    - 70
-    - 100
+    - 2
+    - 5
+    - 8    
+    - 10
+
 width:
   allowed:
     - 320
