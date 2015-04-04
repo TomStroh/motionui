@@ -11,7 +11,7 @@ class FilesController < ApplicationController
   end
 
   def get
-    send_file get_video_path + params[:filename]
+    send_file get_video_path + '/' +params[:filename] + '.avi'
   end
 
   def delete
