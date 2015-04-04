@@ -1,11 +1,11 @@
 class FilesController < ApplicationController
   def index
-    files = []
+    @files = []
     Dir.foreach(get_video_path) {|x|
-      files << x if x.last(4) == '.avi'
+      @files << x if x.last(4) == '.avi'
     }
     respond_to do |format|
-      format.json { render json: files }
+      format.json { render json: @files }
       format.html
     end
   end
@@ -14,7 +14,7 @@ class FilesController < ApplicationController
     send_file get_video_path + '/' +params[:filename] + '.avi'
   end
 
-  def
+  def delete
     #this uses HTTP DELETE, so be sure to use this in your links
     File.delete get_video_path + '/' +params[:filename] + '.avi'
   end
