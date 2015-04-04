@@ -1,0 +1,15 @@
+framerate:
+  allowed:
+    - 50
+    - 70
+    - 100
+width:
+  allowed:
+    - 320
+    - 420
+
+contrast:
+  allowed:
+    - 0
+    - 10
+    - 20

@@ -37,4 +37,5 @@ Rails.application.configure do
 
   config.motion_api_base_path = 'http://192.168.178.68:8080/'
   config.video_path = '/tmp/motion'
+  config.motion_live_stream_path = 'http://192.168.178.68:8081'
 end

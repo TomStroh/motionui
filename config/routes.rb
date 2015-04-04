@@ -3,12 +3,13 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'index#status'
+  root 'index#index'
 
-  get 'update' => 'index#update_config'
+  get 'config/update' => 'config#update_config'
   get 'files' => 'files#index'
   get 'files/:filename' => 'files#get'
   delete 'files/:filename' => 'files#delete'
+  get 'config' => 'config#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
