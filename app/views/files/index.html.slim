@@ -1,0 +1,26 @@
+.row
+  .col-md-9
+    table.table
+      tr
+        th
+          'Key
+        th
+          'Current Files
+        th
+          'Set
+
+      - @files.each do |files|
+        tr
+          td
+            = files[0]
+          td
+            = @files[files[0]]
+          td.buttons
+            - files[1]['allowed'].each do |val|
+              - if val.to_s == @current_files[files[0]]
+                a.btn.btn-default.disabled
+                  = val
+              - else
+                a.btn.btn-default href=config_update_path(:key => files[0], :value => val )
+                  = val
+  .col-md-3
