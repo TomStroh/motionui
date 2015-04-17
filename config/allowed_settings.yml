@@ -2,7 +2,7 @@ framerate:
   allowed:
     - 2
     - 5
-    - 8    
+    - 8
     - 10
 
 width:
@@ -15,3 +15,4 @@ contrast:
     - 0
     - 10
     - 20
+    - 30
