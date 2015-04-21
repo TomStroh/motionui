@@ -14,6 +14,9 @@
           td
             = file
           td.buttons
-                a.btn.btn-default href=files_path(:filename => file )
-                  = file
+                a.btn.btn-default href=file_download_path(file)
+                  = 'Download'
+          td.buttons
+                a.btn.btn-default href=file_delete_path(file)
+                  = 'Delete'
   .col-md-3

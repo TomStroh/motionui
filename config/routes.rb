@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'config/update' => 'config#update_config'
   get 'files' => 'files#index'
   get 'files/:filename' => 'files#get', as: :file_download
-  delete 'files/:filename' => 'files#delete'
+  delete 'files/delete/:filename' => 'files#delete', as: :file_delete
   get 'config' => 'config#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
