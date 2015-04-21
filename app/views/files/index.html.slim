@@ -5,22 +5,15 @@
         th
           'Key
         th
-          'Current Files
+          'Current Value
         th
           'Set
 
-      - @files.each do |files|
+      - @files.each do |file|
         tr
           td
-            = files[0]
-          td
-            = @files[files[0]]
+            = file
           td.buttons
-            - files[1]['allowed'].each do |val|
-              - if val.to_s == @current_files[files[0]]
-                a.btn.btn-default.disabled
-                  = val
-              - else
-                a.btn.btn-default href=config_update_path(:key => files[0], :value => val )
-                  = val
+                a.btn.btn-default href=files_path(:filename => file )
+                  = file
   .col-md-3
