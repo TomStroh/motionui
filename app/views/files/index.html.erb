@@ -12,6 +12,7 @@
           Set
         </th>
       </tr>
+      <%i = 1 %>
       <% @files.each do |file| %>
       <tr>
       <td>
@@ -24,15 +25,16 @@
           <%=button_to("Delete", file_delete_path(file), method: "delete", class: "btn btn-default") %>
         </td>
         <td>
-          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-            Show Video
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal_<%=i %>">
+            <%=file%>
           </button>
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal fade" id="modal_<%=i%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   <h4 class="modal-title" id="myModal"><%=file%></h4>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
                 <div class="modal-body">
                   <%= video_tag(file_download_path(file), controls: true) %>
@@ -42,6 +44,7 @@
           </div>
         </td>
       </tr>
+      <%i = i + 1 %>
       <% end %>
     </table>
   </div>
