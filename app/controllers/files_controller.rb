@@ -18,6 +18,7 @@ class FilesController < ApplicationController
   def delete
     #this uses HTTP DELETE, so be sure to use this in your links
     File.delete get_video_path + '/' + params[:filename] + '.avi'
+    redirect_to :back
   end
 
   private
