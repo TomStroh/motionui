@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-9">
+    <table class="table">
+      <tr>
+        <th>
+          Key
+        </th>
+        <th>
+          Current Value
+        </th>
+        <th>
+          Set
+        </th>
+        <% @settings.each do |setting| %>
+        <tr>
+          <td><%=setting[0] %></td>
+          <td><%=@current_values[setting[0]] %></td>
+          <td class="buttons">
+            <% setting[1]['allowed'].each do |val| %>
+            <% if val.to_s == @current_values[setting[0]] %>
+              <a class="btn btn-default disabled"><%=val %></a>
+            <% else %>
+              <a href="<%=config_update_path(:key => setting[0], :value => val ) %>" class="btn btn-default"><%=val %></a>
+            <% end %>
+            <% end %>
+          </td>
+        </tr>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+  <div class="col-md-3"></div>
+</div>

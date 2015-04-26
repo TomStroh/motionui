@@ -36,6 +36,6 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.motion_api_base_path = 'http://192.168.178.233:8080/'
-  config.video_path = '/tmp/motion'
+  config.video_path = '/home/pi/security-camera/video'
   config.motion_live_stream_path = 'http://192.168.178.233:8081'
 end

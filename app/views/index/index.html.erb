@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-md-9">
+    <span class="label label-info">
+      <%=@status %>
+    </span>
+  </div>
+  <div class="col-md-3">
+    <% if @live_stream_url %>
+      <img class="full-width" src="<%=@live_stream_url %>"/>
+    <% end %>
+  </div>
+</div>
