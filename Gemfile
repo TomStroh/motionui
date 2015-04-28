@@ -41,4 +41,4 @@ gem 'slim', '~> 3.0.2'
 # layout stuff
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'httparty'
-
+gem 'puma'
