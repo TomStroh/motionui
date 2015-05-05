@@ -4,13 +4,13 @@
     <table class="table">
       <tr>
         <th>
-          Key
+          Name
         </th>
         <th>
-          Current Value
         </th>
         <th>
-          Set
+        </th>
+        <th>
         </th>
       </tr>
       <%i = 1 %>
@@ -35,7 +35,6 @@
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   <h4 class="modal-title" id="myModal"><%=file%></h4>
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
                 <div class="modal-body">
                   <%= video_tag(file_download_path(file), controls: true) %>
