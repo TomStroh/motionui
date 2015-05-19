@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'index#index'
 
+  #Purge Time
+  get 'config/purge' => 'purge#show'
+  put 'config/purge' => 'purge#update'
+
   get 'config/update' => 'config#update_config'
   get 'files' => 'files#index'
   get 'files/:filename' => 'files#get', as: :file_download
