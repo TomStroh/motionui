@@ -1,7 +1,7 @@
 class ConfigController < ApplicationController
 
   def index
-    @settings = Config.new.get_config_objects
+    @settings = Config.get_config_objects
   end
 
 

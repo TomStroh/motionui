@@ -14,14 +14,14 @@
         </th>
         <% @settings.each do |setting| %>
         <tr>
-          <td><%=setting['key'] %></td>
-          <td><%=setting['current_value'] %></td>
+          <td><%=setting.key %></td>
+          <td><%=setting.current_value %></td>
           <td class="buttons">
-            <% setting['allowed_values'].each do |val| %>
-              <% if val.to_s == setting['current_value'] %>
+            <% setting.allowed_values.each do |val| %>
+              <% if val.to_s == setting.current_value %>
                 <a class="btn btn-default disabled"><%=val %></a>
               <% else %>
-                <a href="<%=config_update_path(:key => setting['key'], :value => val ) %>" class="btn btn-default"><%=val %></a>
+                <a href="<%=config_update_path(:key => setting.key, :value => val ) %>" class="btn btn-default"><%=val %></a>
               <% end %>
             <% end %>
           </td>
