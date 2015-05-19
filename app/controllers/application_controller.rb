@@ -6,13 +6,7 @@ class ApplicationController < ActionController::Base
 
   private
   def get_config
-    config = HTTParty.get( Rails.application.config.motion_api_base_path + '0/config/list')
-    values = {}
-    config.lines.each do |line|
-      itemvalues = line.split(' = ')
-      values[itemvalues[0]] = itemvalues[1][0..-2]
-    end
-    values
+    Config.new.get_config
   end
 
 end
