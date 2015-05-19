@@ -4,6 +4,7 @@ before_action :purge_params, only:[:update]
 
 def update
   Purge_time.update(purge_params)
+  redirect_to :back
 end
 
 def show

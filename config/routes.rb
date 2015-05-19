@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   #Purge Time
   get 'config/purge' => 'purge#show'
-  put 'config/purge' => 'purge#update'
+  put 'config/purge/:days_to_purge' => 'purge#update', as: :purge_update
 
   get 'config/update' => 'config#update_config'
   get 'files' => 'files#index'
