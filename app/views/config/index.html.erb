@@ -13,12 +13,20 @@
           Set
         </th>
         <tr>
-          <td>Purge Days</td>
-          <td></td>
+          <td>purge_time</td>
+          <td><%= $purge_time %></td>
           <td class="buttons">
             <%=button_to("3", purge_update_path(3), method: "put", class: "btn btn-default") %>
             <%=button_to("5", purge_update_path(5), method: "put", class: "btn btn-default") %>
             <%=button_to("8", purge_update_path(8), method: "put", class: "btn btn-default") %>
+          </td>
+        </tr>
+        <tr>
+          <td>beep_value</td>
+          <td><%= $beep %></td>
+          <td class="buttons">
+            <%=button_to("ON", beep_update_path("on"), method: "put", class: "btn btn-default") %>
+            <%=button_to("OFF", beep_update_path("off"), method: "put", class: "btn btn-default") %>
           </td>
         </tr>
         <% @settings.each do |setting| %>

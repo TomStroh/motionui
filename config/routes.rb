@@ -1,13 +1,20 @@
 Rails.application.routes.draw do
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'index#index'
 
+
+  #Beep
+  get 'config/beep' => 'beep#show'
+  put 'config/beep/:beep_value' => 'beep#update', as: :beep_update
+
   #Purge Time
   get 'config/purge' => 'purge#show'
-  put 'config/purge/:days_to_purge' => 'purge#update', as: :purge_update
+  put 'config/purge/update/:days_to_purge' => 'purge#update', as: :purge_update
+
 
   get 'config/update' => 'config#update_config'
   get 'files' => 'files#index'

@@ -8,7 +8,7 @@ def update
 end
 
 def show
-  @purge_time = Purge_time.show
+  $purge_time = Purge_time.show
 end
 
 private

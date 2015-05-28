@@ -1,1 +1,1 @@
-json.days_to_purge @purge_time
+json.days_to_purge $purge_time

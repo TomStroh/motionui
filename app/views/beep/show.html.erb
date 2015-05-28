@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <table class="table">
+      <tr>
+        <th>
+          Key
+        </th>
+        <th>
+          Current Value
+        </th>
+        <th>
+          Set
+        </th>
+        <tr>
+          <td>Purge Days</td>
+          <td><h1>Listing Books</h1>
+
+<table>
+  <tr>
+    <th><%= @beep %></th>
+    <th>Summary</th>
+
+  </tr>
+
+  <tr>
+          <td class="buttons">
+            <%=button_to("3", purge_update_path(3), method: "put", class: "btn btn-default") %>
+            <%=button_to("5", purge_update_path(5), method: "put", class: "btn btn-default") %>
+            <%=button_to("8", purge_update_path(8), method: "put", class: "btn btn-default") %>
+          </td>
+  </tr>
+</table>
+  </div>
+  <div class="col-md-2"></div>
+</div>

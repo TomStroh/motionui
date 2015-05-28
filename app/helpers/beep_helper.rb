@@ -1,0 +1,2 @@
+module BeepHelper
+end
