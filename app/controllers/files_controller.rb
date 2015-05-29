@@ -1,4 +1,5 @@
 class FilesController < ApplicationController
+
   def index
     @files = []
     Dir.foreach(get_video_path) {|x|
@@ -18,7 +19,7 @@ class FilesController < ApplicationController
   def delete
     #this uses HTTP DELETE, so be sure to use this in your links
     File.delete get_video_path + '/' + params[:filename] + '.mp4'
-    redirect_to :back
+    #return status 202
   end
 
   private

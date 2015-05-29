@@ -76,7 +76,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.motion_api_base_path = 'http://192.168.178.233:8080/'
+  config.motion_api_base_path = 'http://raspberrydh.ddns.net:8080/'
   config.video_path = '/home/pi/security-camera/video/mp4'
-  config.motion_live_stream_path = 'http://192.168.178.233:8081'
+  config.motion_live_stream_path = 'http://raspberrydh.ddns.net:8081'
 end
