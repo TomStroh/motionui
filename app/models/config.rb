@@ -2,6 +2,7 @@ class Config
   require 'yaml'
   @@settings
 
+  #get allowed config values
   def self.get_config_objects
     values = self.get_config
     config_obj = []
@@ -16,10 +17,11 @@ class Config
     config_obj
   end
 
+  #get alloew settings from yml list
   def self.get_config
     values = {}
     @@settings ||= YAML.load_file(Rails.root.join('config', 'allowed_settings.yml'))
-    remote_config ||= HTTParty.get( Rails.application.config.motion_api_base_path + '0/config/list')
+    remote_config ||= HTTParty.get($motion_api_base_path+"0/config/list")
 
     remote_config.lines.each do |line|
       itemvalues = line.split(' = ')
