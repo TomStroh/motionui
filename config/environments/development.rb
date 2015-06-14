@@ -36,7 +36,7 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   #directory to the video files
-  config.video_path = '/home/pi/security-camera/video/mp4'
+  config.video_path = '/home/pi/motionui/public/video/'
 
   #config.motion_api_base_path = 'http://' + $ip + ':8080/'
   #config.motion_live_stream_path = 'http://' + $ip + ':8081'

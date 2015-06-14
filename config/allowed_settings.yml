@@ -8,7 +8,12 @@ framerate:
 width:
   allowed:
     - 320
-    - 420
+    - 800
+
+heigth:
+  allowed:
+    - 240
+    - 600
 
 contrast:
   allowed:
