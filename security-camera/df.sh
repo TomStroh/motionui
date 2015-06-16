@@ -10,9 +10,9 @@ if (($size < 10000)); then
 	cd /home/pi/motionui/public/video/ 
 	ls -t | sed -e '1,1d' | xargs -d '\n' rm
 	echo "Speicherplatz demnächst voll" 
-        #10 Min warten bis zur nächsten Ausführung, wenn Speicherplatz nicht voll
-        sleep 600;
 else
 	 echo "Speicherplatz nicht voll"
+        #10 Min warten bis zur nächsten Ausführung, wenn Speicherplatz nicht voll
+        sleep 600;
 fi
 done
