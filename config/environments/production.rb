@@ -77,7 +77,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #directory to the video files
-  config.video_path = '/home/pi/security-camera/video/mp4'
+  config.video_path = '/home/pi/motionui/public/video'
 
   #config.motion_api_base_path = 'http://' + $ip + ':8080/'
   #config.motion_live_stream_path = 'http://' + $ip + ':8081'
