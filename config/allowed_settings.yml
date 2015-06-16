@@ -10,7 +10,7 @@ width:
     - 320
     - 800
 
-heigth:
+height:
   allowed:
     - 240
     - 600
